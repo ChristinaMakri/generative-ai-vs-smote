@@ -1,19 +1,19 @@
-# Generative AI vs SMOTE — Imbalanced Data Benchmark
+# Generative AI vs SMOTE 
 
 > Can generative AI outperform SMOTE on imbalanced medical data? A systematic comparison of synthetic oversampling techniques.
 
 ## Research Question
 
-When dealing with imbalanced tabular data, classical resampling methods like SMOTE have been the go-to solution. This project investigates whether modern generative models (CTGAN, TVAE, custom GAN) can produce higher-quality synthetic minority samples — and whether that translates to better downstream classifier performance.
+When dealing with imbalanced tabular data, classical resampling methods like SMOTE have been the go-to solution. This project investigates whether modern generative models (CTGAN, TVAE, custom GAN) can produce higher-quality synthetic minority samples, and whether that translates to better downstream classifier performance.
 
-**Dataset:** [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) — ~5,100 records, ~5% stroke cases (~20:1 imbalance ratio)
+**Dataset:** [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) , ~5,100 records, ~5% stroke cases (~20:1 imbalance ratio)
 
 ## Approach
 
 We evaluate each method on two levels:
 
-1. **Synthetic data quality** — Do the generated samples resemble real stroke cases? (distribution similarity, feature correlations)
-2. **Downstream classifier performance** — Does augmentation with synthetic data improve F1, PR-AUC, and MCC?
+1. **Synthetic data quality** : Do the generated samples resemble real stroke cases? (distribution similarity, feature correlations)
+2. **Downstream classifier performance** : Does augmentation with synthetic data improve F1, PR-AUC, and MCC?
 
 ## Methods Compared
 
@@ -58,9 +58,9 @@ kaggle datasets download -d fedesoriano/stroke-prediction-dataset -p data/ --unz
 ## Evaluation Metrics
 
 Accuracy is misleading on imbalanced data. We use:
-- **PR-AUC** — Precision-Recall Area Under Curve
-- **F1 Score** — Harmonic mean of precision and recall
-- **MCC** — Matthews Correlation Coefficient
+- **PR-AUC** : Precision-Recall Area Under Curve
+- **F1 Score** : Harmonic mean of precision and recall
+- **MCC** : Matthews Correlation Coefficient
 
 ## Stack
 
