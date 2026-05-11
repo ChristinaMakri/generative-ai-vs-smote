@@ -32,8 +32,7 @@ We evaluate each method on two levels:
 ├── notebooks/
 │   ├── 1_eda.ipynb              # Exploratory Data Analysis
 │   ├── 2_baselines.ipynb        # SMOTE & classical baselines
-│   ├── 3_generative/
-│   │   └── ctgan.ipynb          # CTGAN & TVAE (SDV library)
+│   ├── 3_ctgan_tvae.ipynb       # CTGAN & TVAE (SDV library)
 │   ├── 4_evaluation.ipynb       # Full benchmark comparison
 │   └── 5_synthetic_quality.ipynb # Synthetic data quality analysis
 └── src/                         # Reusable modules
