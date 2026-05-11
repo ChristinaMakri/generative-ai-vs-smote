@@ -35,7 +35,6 @@ We evaluate each method on two levels:
 │   ├── 3_ctgan_tvae.ipynb       # CTGAN & TVAE (SDV library)
 │   ├── 4_evaluation.ipynb       # Full benchmark comparison
 │   └── 5_synthetic_quality.ipynb # Synthetic data quality analysis
-└── src/                         # Reusable modules
 ```
 
 ## Setup
