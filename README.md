@@ -4,7 +4,7 @@
 
 ## Research Question
 
-When dealing with imbalanced tabular data, classical resampling methods like SMOTE have been the go-to solution. This project investigates whether modern generative models (CTGAN, TVAE, custom GAN) can produce higher-quality synthetic minority samples, and whether that translates to better downstream classifier performance.
+When dealing with imbalanced tabular data, classical resampling methods like SMOTE have been the go-to solution. This project investigates whether modern generative models (CTGAN, TVAE) can produce higher-quality synthetic minority samples, and whether that translates to better downstream classifier performance.
 
 **Dataset:** [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) , ~5,100 records, ~5% stroke cases (~20:1 imbalance ratio)
 
@@ -24,7 +24,6 @@ We evaluate each method on two levels:
 | SMOTE | Classical | Interpolation between minority samples |
 | CTGAN | Generative | GAN-based tabular data synthesizer |
 | TVAE | Generative | VAE-based tabular data synthesizer |
-| Custom GAN | Generative | PyTorch GAN trained on minority class |
 
 ## Project Structure
 
@@ -34,8 +33,7 @@ We evaluate each method on two levels:
 │   ├── 1_eda.ipynb              # Exploratory Data Analysis
 │   ├── 2_baselines.ipynb        # SMOTE & classical baselines
 │   ├── 3_generative/
-│   │   ├── ctgan.ipynb          # CTGAN & TVAE (SDV library)
-│   │   └── custom_gan.ipynb     # Custom PyTorch GAN
+│   │   └── ctgan.ipynb          # CTGAN & TVAE (SDV library)
 │   ├── 4_evaluation.ipynb       # Full benchmark comparison
 │   └── 5_synthetic_quality.ipynb # Synthetic data quality analysis
 └── src/                         # Reusable modules
@@ -64,7 +62,7 @@ Accuracy is misleading on imbalanced data. We use:
 
 ## Stack
 
-- Python, PyTorch
+- Python
 - scikit-learn, imbalanced-learn
 - SDV (CTGAN, TVAE)
 - pandas, matplotlib, seaborn
